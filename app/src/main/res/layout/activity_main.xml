@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_9"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="TRANSLATOR"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:gravity="center"
+        android:layout_marginBottom="20dp">
+
+        <Spinner
+            android:id="@+id/idFromSpinner"
+            android:layout_width="103dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:padding="12dp" /> <!-- Optional: Add background drawable for better styling -->
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_arrow"
+            android:layout_margin="12dp"
+            app:tint="#3A8F59" />
+
+        <Spinner
+            android:id="@+id/idToSpinner"
+            android:layout_width="102dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="12dp"
+            android:layout_weight="1"
+            android:padding="12dp" /> <!-- Optional: Add background drawable for better styling -->
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="Source Text"
+        android:padding="12dp"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black">
+
+        <AutoCompleteTextView
+            android:id="@+id/idEdtSource"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:inputType="textImeMultiLine|textMultiLine"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#D6CBCB"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/idMicIcon"
+        android:layout_width="61dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="Microphone"
+        android:src="@drawable/ic_mic" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/idBtnTranslate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#272626"
+        android:padding="16dp"
+        android:text="Translate"
+        android:textAllCaps="false"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/idTvTranslatedTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Translated Text"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textColorHint="#D6CBCB"
+        android:textSize="22sp"
+        android:padding="12dp"
+        android:background="@drawable/border" /> <!-- Apply the border here -->
+</LinearLayout>
